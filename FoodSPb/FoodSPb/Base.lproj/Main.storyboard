@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EHh-ra-8qa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Рестораны Санкт-Петербурга-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodSPb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FDr-8J-zjq">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZU-EX-J4q">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ginza"/>
+                                        <connections>
+                                            <segue destination="UjK-eI-7BJ" kind="show" id="WCm-LQ-uXw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="106-v2-60f">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Marcellis"/>
+                                        <connections>
+                                            <segue destination="UjK-eI-7BJ" kind="show" id="zeD-C1-Qj7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEo-iz-VbS">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Market Place"/>
+                                        <connections>
+                                            <segue destination="UjK-eI-7BJ" kind="show" id="Oo1-8e-RNv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FDr-8J-zjq" secondAttribute="height" multiplier="27:16" id="Q6M-mJ-wGe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FDr-8J-zjq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="7bo-Za-IrY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FDr-8J-zjq" secondAttribute="bottom" constant="300" id="Ci6-gn-LZZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FDr-8J-zjq" secondAttribute="trailing" constant="50" id="xA6-W1-yAW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рестораны Санкт-Петербурга" id="Puy-v0-XPc"/>
+                    <connections>
+                        <outlet property="ginzaButton" destination="7ZU-EX-J4q" id="gsn-aM-vOY"/>
+                        <outlet property="marcellisButton" destination="106-v2-60f" id="bnc-oe-i4a"/>
+                        <outlet property="marketPlaceButton" destination="tEo-iz-VbS" id="D90-gF-di8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2975.1999999999998" y="138.98050974512745"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="ZzO-eD-Tdh">
+            <objects>
+                <viewController id="UjK-eI-7BJ" customClass="DataViewController" customModule="FoodSPb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ipk-CN-kct"/>
+                        <viewControllerLayoutGuide type="bottom" id="g9N-2X-mbZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pc-ho-bzL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u46-uj-g5Q"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-Qj-SaK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="iCZ-H7-pwE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="top" secondItem="u46-uj-g5Q" secondAttribute="bottom" constant="8" id="6Pg-hf-67T"/>
+                            <constraint firstItem="u46-uj-g5Q" firstAttribute="top" secondItem="ipk-CN-kct" secondAttribute="bottom" constant="30" id="A9q-47-QXw"/>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="leading" secondItem="u46-uj-g5Q" secondAttribute="leading" id="Uqb-4t-HWT"/>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="top" secondItem="u46-uj-g5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="WVG-IR-dfY"/>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="trailing" secondItem="8pc-ho-bzL" secondAttribute="trailingMargin" id="ZFP-Mu-v7C"/>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="trailing" secondItem="u46-uj-g5Q" secondAttribute="trailing" id="cm7-Ms-6x4"/>
+                            <constraint firstItem="g9N-2X-mbZ" firstAttribute="top" secondItem="sEc-Qj-SaK" secondAttribute="bottom" constant="25" id="gE6-fi-qoO"/>
+                            <constraint firstItem="sEc-Qj-SaK" firstAttribute="leading" secondItem="8pc-ho-bzL" secondAttribute="leadingMargin" id="k30-a6-g6E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantImage" destination="u46-uj-g5Q" id="2F6-tI-xL3"/>
+                        <outlet property="restaurantInfo" destination="sEc-Qj-SaK" id="2eR-U2-DmS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-Ky-VP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3765.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tnL-II-Nmy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EHh-ra-8qa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nv8-Qr-gO7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g6v-nq-oO3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkM-8i-rG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WCm-LQ-uXw"/>
+    </inferredMetricsTieBreakers>
+</document>
